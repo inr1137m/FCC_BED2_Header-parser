@@ -28,7 +28,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get('/api/whoami', (req, res) => {
   let [ip, lang, sw] = [req.headers['x-forwarded-for'], req.headers['accept-language'], req.headers['user-agent']];
-  res.send({"ipaddress":ip, "language":lang, "software":sw});
+  res.send({ipaddress:ip, language:lang, software:sw});
 })
 
 // listen for requests :)
